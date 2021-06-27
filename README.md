@@ -26,8 +26,10 @@ NOTE: A plugin needs to be supported by the processor specific driver - as a min
 
 * [Laser/Coolant](https://github.com/grblHAL/Plugins_laser/) - for laser machines. __NOTE:__ Under development, testers wanted.
 
+* [Bluetooth](https://github.com/grblHAL/Plugins_Bluetooth/) - for Bluetooth modules used for wireless communication<sup>1</sup>. __NOTE:__ Preview version.
+
 <sup>1</sup> Plugin has $-settings, adding or removing it may cause settings for other plugins to be reset to default values.  
 <sup>2</sup> Driver support code has $-settings, adding or removing this may cause settings for other plugins to be reset to default values. 
 
 ---
-2021-02-25
+2021-06-27
