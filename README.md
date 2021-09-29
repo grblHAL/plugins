@@ -32,8 +32,14 @@ NOTE: A plugin needs to be supported by the processor specific driver - as a min
 
 * [WebUI](https://github.com/grblHAL/Plugin_WebUI/) - adds [ESP32-WEBUI](https://github.com/luc-github/ESP3D-webui) support for some networking capable boards and drivers.
 
+#### Third party plugins:
+
+* ['Datron like' RGB indicator lights](https://github.com/5ocworkshop/grblhal-rgb-plugin) - by 5ocworkshop.
+
+---
+
 <sup>1</sup> Plugin has $-settings, adding or removing it may cause settings for other plugins to be reset to default values.  
 <sup>2</sup> Driver support code has $-settings, adding or removing this may cause settings for other plugins to be reset to default values. 
 
 ---
-2021-09-19
+2021-09-29
