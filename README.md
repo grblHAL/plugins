@@ -40,10 +40,47 @@ NOTE: A plugin needs to be supported by the processor specific driver - as a min
 
 A number of example and template plugins can be found [here](https://github.com/grblHAL/Templates/tree/master/my_plugin). Some are usable 'as-is', some not.
 
+#### I have written a plugin and I want to make it available to grblHAL users
+
+Pull requests for the plugin code itself is not possible as a new repository has to be created and linked to to the different drivers by adding it as a submodule.
+You will have to add it to your own github repository and create pull request\(s\) against the core.
+
+__Plugin name:__  
+
+A plugin has to be given an "official" name so that it can be enabled and added to the startup sequence.  
+A #define symbol `<NAME>_ENABLE` and a corresponding function `void <name>_init(void)` is required, `<NAME>` and `<name>` is the upper and lower case name of your plugin.  
+To add a call to the init function at startup it has to be added to [plugins_init.h](https://github.com/grblHAL/core/blob/master/plugins_init.h) in the _Third party plugin_ section.
+Create a pull request for [plugins_init.h](https://github.com/grblHAL/core/blob/master/plugins_init.h) to get it added.  
+An example:
+```
+#if PROBE_RELAY_ENABLE
+    extern void probe_relay_init (void);
+    probe_relay_init();
+#endif
+```
+
+To install the plugin the user has to download the code from your repo and copy it to the folder where _driver.c_ is located and add `#define symbol <NAME>_ENABLE 1` somewhere in the drivers _my_machine.h_ file.
+
+__Addional M-codes:__
+
+If your plugin provides additional M-codes these should be documented in the repo readme and the plugin code.
+A pull request for getting them added to [gcode.h](https://github.com/grblHAL/core/blob/4a140576a2acf12172ef3532b16b433a07984f71/gcode.h#L199-L226) might be accepted, more likely so if similar in function to those defined by [Marlin](https://marlinfw.org/docs/gcode/M010-M011.html).  
+It is also kind of ok to just cast the enum value [in the code](https://github.com/grblHAL/Templates/blob/master/my_plugin/probe%20select/my_plugin.c), however there is a slight risk that it could clash with other plugins - but not too high if similar to those in the Marlin list.
+
+__Additional `$`-settings:__
+
+Setting numbers for your plugin has to be added to [settings.h](https://github.com/grblHAL/core/blob/4a140576a2acf12172ef3532b16b433a07984f71/settings.h#L165) to avoid clashes.
+If any is needed [start a discussion](https://github.com/grblHAL/core/discussions) first as I do not yet have a clear idea about how this should be handled, I guess it should be possible to use non-core settings in some cases.
+
+__Notes__:  
+The symbol definition may be added to the compiler command line instead, some IDEs allows this from the UI.  
+There is no owner of third party plugin names, existing names can be used for alternative implementations as long as they provide similar functionality.  
+Implementations should add information about itself in the `$I` report, see one of the [templates](https://github.com/grblHAL/Templates/tree/master/my_plugin) for how this is done.
+
 ---
 
-<sup>1</sup> Plugin has $-settings, adding or removing it may cause settings for other plugins to be reset to default values.  
-<sup>2</sup> Driver support code has $-settings, adding or removing this may cause settings for other plugins to be reset to default values. 
+<sup>1</sup> Plugin has `$`-settings, adding or removing it may cause settings for other plugins to be reset to default values.  
+<sup>2</sup> Driver support code has `$`-settings, adding or removing this may cause settings for other plugins to be reset to default values. 
 
 ---
-2021-10-11
+2021-11-09
