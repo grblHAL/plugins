@@ -42,7 +42,7 @@ A number of example and template plugins can be found [here](https://github.com/
 
 #### I have written a plugin and I want to make it available to grblHAL users
 
-Pull requests for the plugin code itself is not possible as a new repository has to be created and linked to to the different drivers by adding it as a submodule.
+Pull requests for the plugin code itself is not possible as a new repository has to be created and linked to the different drivers by adding it as a submodule.
 You will have to add it to your own github repository and create pull request\(s\) against the core.
 
 __Plugin name:__  
