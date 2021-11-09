@@ -32,15 +32,15 @@ NOTE: A plugin needs to be supported by the processor specific driver - as a min
 
 * [WebUI](https://github.com/grblHAL/Plugin_WebUI/) - adds [ESP32-WEBUI](https://github.com/luc-github/ESP3D-webui) support for some networking capable boards and drivers.
 
-#### Third party plugins
+### Third party plugins
 
 * ['Datron like' RGB indicator lights](https://github.com/5ocworkshop/grblhal-rgb-plugin) - by 5ocworkshop.
 
-#### Example and template plugins
+### Example and template plugins
 
 A number of example and template plugins can be found [here](https://github.com/grblHAL/Templates/tree/master/my_plugin). Some are usable 'as-is', some not.
 
-#### I have written a plugin and I want to make it available to grblHAL users
+### I have written a plugin and I want to make it available to grblHAL users
 
 Pull requests for the plugin code itself is not possible as a new repository has to be created and linked to the different drivers by adding it as a submodule.
 You will have to add it to your own github repository and create pull request\(s\) against the core.
