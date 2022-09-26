@@ -22,9 +22,11 @@ NOTE: A plugin needs to be supported by the processor specific driver - as a min
 
 * [Trinamic](https://github.com/grblHAL/Plugins_motor/) - for Trinamic TMC2130 stepper drivers controlled via SPI or I2C<sup>1</sup>.
 
-* [Laser/PPI](https://github.com/grblHAL/Plugins_laser/) - for laser machines. __NOTE:__ Under development, testers wanted.
+* [Laser/PPI](https://github.com/grblHAL/Plugins_laser/#laser-ppi) - for laser machines. __NOTE:__ Under development, testers wanted.
 
-* [Laser/Coolant](https://github.com/grblHAL/Plugins_laser/) - for laser machines. __NOTE:__ Under development, testers wanted.
+* [Laser/Coolant](https://github.com/grblHAL/Plugins_laser/#laser-coolant) - for laser machines. __NOTE:__ Under development, testers wanted.
+
+* [Laser/LigthBurn clusters](https://github.com/grblHAL/Plugins_laser/#lightburn-clusters) - for laser machines. __NOTE:__ Under development, testers wanted.
 
 * [Fans](https://github.com/grblHAL/Plugin_fans/) - for fan control.
 
@@ -83,4 +85,4 @@ Implementations should add information about itself in the `$I` report, see one 
 <sup>2</sup> Driver support code has `$`-settings, adding or removing this may cause settings for other plugins to be reset to default values. 
 
 ---
-2021-11-09
+2022-09-26
