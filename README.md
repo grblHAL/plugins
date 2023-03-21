@@ -10,7 +10,7 @@ NOTE: A plugin needs to be supported by the processor specific driver - as a min
 
 * [Keypad](https://github.com/grblHAL/Plugin_I2C_keypad/) - for I2C based keypad<sup>1</sup>. Support for jogging etc. [This](https://github.com/terjeio/I2C-interface-for-4x4-keyboard) is an example of an implementation.
 
-* [Networking](https://github.com/grblHAL/Plugin_networking/) - for telnet or websocket communication<sup>2</sup>.
+* [Networking](https://github.com/grblHAL/Plugin_networking/) - for telnet or websocket communication plus a number of other networking protocols<sup>2</sup>.
 
 * [Odometer](https://github.com/grblHAL/Plugin_odometer/) - for logging of distances travelled and machining time. __NOTE:__ For review.
 
@@ -33,6 +33,8 @@ NOTE: A plugin needs to be supported by the processor specific driver - as a min
 * [Bluetooth](https://github.com/grblHAL/Plugins_Bluetooth/) - for Bluetooth modules used for wireless communication<sup>1</sup>. __NOTE:__ Preview version.
 
 * [WebUI](https://github.com/grblHAL/Plugin_WebUI/) - adds [ESP32-WEBUI](https://github.com/luc-github/ESP3D-webui) support for some networking capable boards and drivers.
+
+* [Embroidery](https://github.com/grblHAL/Plugin_embroidery/) - adds functionality for streaming Brother .PES and Tajima .DST format files from SD card<sup>1</sup>. __NOTE:__ Under development, testers wanted.
 
 ### Third party plugins
 
@@ -85,4 +87,4 @@ Implementations should add information about itself in the `$I` report, see one 
 <sup>2</sup> Driver support code has `$`-settings, adding or removing this may cause settings for other plugins to be reset to default values. 
 
 ---
-2022-09-26
+2023-03-21
