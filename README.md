@@ -20,7 +20,7 @@ NOTE: A plugin needs to be supported by the processor specific driver - as a min
 
 * [Spindle](https://github.com/grblHAL/Plugins_spindle/) - for spindles controlled via MODBUS. __NOTE:__ Not yet verified, testers wanted.
 
-* [Trinamic](https://github.com/grblHAL/Plugins_motor/) - for Trinamic TMC2130 stepper drivers controlled via SPI or I2C<sup>1</sup>.
+* [Trinamic](https://github.com/grblHAL/Plugins_motor/) - for Trinamic TMC2130, TMC2209 and TMC5160 stepper drivers controlled via SPI, UART or I2C<sup>1</sup>.
 
 * [Laser/PPI](https://github.com/grblHAL/Plugins_laser/#laser-ppi) - for laser machines. __NOTE:__ Under development, testers wanted.
 
@@ -39,6 +39,7 @@ NOTE: A plugin needs to be supported by the processor specific driver - as a min
 ### Third party plugins
 
 * ['Datron like' RGB indicator lights](https://github.com/5ocworkshop/grblhal-rgb-plugin) - by 5ocworkshop.
+* [Add status of digital aux outputs to real-time report](https://github.com/Avatario34/auxp) - by Avatario34.
 
 ### Example and template plugins
 
@@ -87,4 +88,4 @@ Implementations should add information about itself in the `$I` report, see one 
 <sup>2</sup> Driver support code has `$`-settings, adding or removing this may cause settings for other plugins to be reset to default values. 
 
 ---
-2023-03-21
+2023-04-18
