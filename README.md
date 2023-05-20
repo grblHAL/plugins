@@ -41,6 +41,20 @@ NOTE: A plugin needs to be supported by the processor specific driver - as a min
 * ['Datron like' RGB indicator lights](https://github.com/5ocworkshop/grblhal-rgb-plugin) - by 5ocworkshop.
 * [Add status of digital aux outputs to real-time report](https://github.com/Avatario34/auxp) - by Avatario34.
 
+### How to enable plugins
+Let's look at an example of how to add and enable a plugin.
+1. first of all need add plugin via git submodule ```git submodule add https://github.com/grblHAL/Plugin_keypad keypad```
+2. add code to ```Src/driver.c```
+```
+#if KEYPAD_ENABLE
+#include "keypad/keypad.h"
+#endif
+```
+3. define in _Inc/my_machine.h_ UART keypad ```#define KEYPAD_ENABLE 2```
+4. add _keypad_ folder to source folder: Project->Properties->C/C++ General->Path and Symbols->Source Location 
+![svg](https://user-images.githubusercontent.com/20260062/239670801-a7c1bbb0-3383-4637-96d4-3865bab2a628.png)
+
+
 ### Example and template plugins
 
 A number of example and template plugins can be found [here](https://github.com/grblHAL/Templates/tree/master/my_plugin). Some are usable 'as-is', some not.
