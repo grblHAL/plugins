@@ -16,7 +16,7 @@ NOTE: A plugin needs to be supported by the processor specific driver - as a min
 
 * [Plasma/THC](https://github.com/grblHAL/Plugin_plasma/) - for plasma machines<sup>1</sup>. __NOTE:__ Under development, testers wanted.
 
-* [SD card](https://github.com/grblHAL/Plugin_SD_card/) - for executing gcode stored on SD card.
+* [SD card](https://github.com/grblHAL/Plugin_SD_card/) - for executing gcode stored on SD card and running macros from the card or in the littlefs finling system when available.
 
 * [Spindle](https://github.com/grblHAL/Plugins_spindle/) - for spindles controlled via MODBUS. __NOTE:__ Not yet verified, testers wanted.
 
@@ -36,6 +36,9 @@ NOTE: A plugin needs to be supported by the processor specific driver - as a min
 
 * [Embroidery](https://github.com/grblHAL/Plugin_embroidery/) - adds functionality for streaming Brother .PES and Tajima .DST format files from SD card<sup>1</sup>. __NOTE:__ Under development, testers wanted.
 
+* [Miscellaneous](https://github.com/grblHAL/Plugins_misc/) - assorted small and useful plugins, follow the link to see which.
+
+
 ### Third party plugins
 
 * ['Datron like' RGB indicator lights](https://github.com/5ocworkshop/grblhal-rgb-plugin) - by 5ocworkshop.
@@ -44,6 +47,8 @@ NOTE: A plugin needs to be supported by the processor specific driver - as a min
 ### Example and template plugins
 
 A number of example and template plugins can be found [here](https://github.com/grblHAL/Templates/tree/master/my_plugin). Some are usable 'as-is', some not.
+
+__NOTE:__ The ESP32 and RP2040 drivers require the `AddMyPlugin` option to be set to `ON` in _CMakeLists.txt_ to enable compilation of _my_plugin.c_.
 
 ### I have written a plugin and I want to make it available to grblHAL users
 
@@ -88,4 +93,4 @@ Implementations should add information about itself in the `$I` report, see one 
 <sup>2</sup> Driver support code has `$`-settings, adding or removing this may cause settings for other plugins to be reset to default values. 
 
 ---
-2023-04-18
+2024-11-13
