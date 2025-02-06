@@ -82,10 +82,14 @@ __Additional `$`-settings:__
 Setting numbers for your plugin has to be added to [settings.h](https://github.com/grblHAL/core/blob/4a140576a2acf12172ef3532b16b433a07984f71/settings.h#L165) to avoid clashes.
 If any is needed [start a discussion](https://github.com/grblHAL/core/discussions) first as I do not yet have a clear idea about how this should be handled, I guess it should be possible to use non-core settings in some cases.
 
-__Notes__:  
+__Notes:__  
 The symbol definition may be added to the compiler command line instead, some IDEs allows this from the UI.  
 There is no owner of third party plugin names, existing names can be used for alternative implementations as long as they provide similar functionality.  
 Implementations should add information about itself in the `$I` report, see one of the [templates](https://github.com/grblHAL/Templates/tree/master/my_plugin) for how this is done.
+
+__Technical documentation:__  
+
+Documentation extracted from the core repository is [available here](https://svn.io-engineering.com/grblHAL/html/hal_8h.html). This is still work in progress.
 
 ---
 
@@ -93,4 +97,4 @@ Implementations should add information about itself in the `$I` report, see one 
 <sup>2</sup> Driver support code has `$`-settings, adding or removing this may cause settings for other plugins to be reset to default values. 
 
 ---
-2024-11-13
+2025-02-06
