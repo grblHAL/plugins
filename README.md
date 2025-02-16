@@ -34,6 +34,8 @@ NOTE: A plugin needs to be supported by the processor specific driver - as a min
 
 * [WebUI](https://github.com/grblHAL/Plugin_WebUI/) - adds [ESP32-WEBUI](https://github.com/luc-github/ESP3D-webui) support for some networking capable boards and drivers.
 
+* [OpenPNP](https://github.com/grblHAL/Plugin_OpenPNP/) - adds some M-codes to support OpenPNP. __NOTE:__ Under development, testers wanted.
+
 * [Embroidery](https://github.com/grblHAL/Plugin_embroidery/) - adds functionality for streaming Brother .PES and Tajima .DST format files from SD card<sup>1</sup>. __NOTE:__ Under development, testers wanted.
 
 * [Miscellaneous](https://github.com/grblHAL/Plugins_misc/) - assorted small and useful plugins, follow the link to see which.
@@ -97,4 +99,4 @@ Documentation extracted from the core repository is [available here](https://svn
 <sup>2</sup> Driver support code has `$`-settings, adding or removing this may cause settings for other plugins to be reset to default values. 
 
 ---
-2025-02-06
+2025-02-16
