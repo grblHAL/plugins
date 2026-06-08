@@ -38,26 +38,27 @@ NOTE: A plugin needs to be supported by the processor specific driver - as a min
 
 * [Embroidery](https://github.com/grblHAL/Plugin_embroidery/) - adds functionality for streaming Brother .PES and Tajima .DST format files from SD card<sup>1</sup>. __NOTE:__ Under development, testers wanted.
 
-* [Pneumaseal](https://github.com/gcormier/grblhal-pneumaseal/) - for spindles requiring air to keep the bearing clean, this plugin will intelligently let you control a solenoid based on various conditions to reduce air usage when not required.
-
-* [Interlock](https://github.com/gcormier/grblhal-interlock/) - generic firmware interlock that inhibit spindle (M3/M4) and output (M62-M65) commands based on user defined states.
-
-* [Thermistor](https://github.com/gcormier/grblhal-thermistor/) - can read temperature from thermistors, and has configurable fault temperatures for detecting overheat conditions. Note - requires the appropriate resistor dividers, supply, ADC inputs  and code changes for your specific thermistor. Defaults are for a Jianken JGL-80 ATC spindle.
-
-
 * [Miscellaneous](https://github.com/grblHAL/Plugins_misc/) - assorted small and useful plugins, follow the link to see which.
-
 
 ### Third party plugins
 
 * ['Datron like' RGB indicator lights](https://github.com/5ocworkshop/grblhal-rgb-plugin) - by 5ocworkshop.
+
 * [Add status of digital aux outputs to real-time report](https://github.com/Avatario34/auxp) - by Avatario34.
+
+* [Pneumaseal](https://github.com/gcormier/grblhal-pneumaseal/) - for spindles requiring air to keep the bearing clean, this plugin will intelligently let you control a solenoid based on various conditions to reduce air usage when not required.
+
+* [Interlock](https://github.com/gcormier/grblhal-interlock/) - generic firmware interlock that inhibit spindle (M3/M4) and output (M62-M65) commands based on user defined states.
+
+* [Thermistor](https://github.com/gcormier/grblhal-thermistor/) - can read temperature from thermistors, and has configurable fault temperatures for detecting overheat conditions.
+> [!NOTE]
+> Requires the appropriate resistor dividers, supply, ADC inputs  and code changes for your specific thermistor. Defaults are for a Jianken JGL-80 ATC spindle.
 
 ### Example and template plugins
 
 A number of example and template plugins can be found [here](https://github.com/grblHAL/Templates/tree/master/my_plugin). Some are usable 'as-is', some not.
-
-__NOTE:__ The ESP32 and RP2040 drivers require the `AddMyPlugin` option to be set to `ON` in _CMakeLists.txt_ to enable compilation of _my_plugin.c_.
+> [!NOTE]
+> The ESP32 and RP2040 drivers require the `AddMyPlugin` option to be set to `ON` in _CMakeLists.txt_ to enable compilation of _my_plugin.c_.
 
 ### I have written a plugin and I want to make it available to grblHAL users
 
@@ -91,10 +92,10 @@ __Additional `$`-settings:__
 Setting numbers for your plugin has to be added to [settings.h](https://github.com/grblHAL/core/blob/4a140576a2acf12172ef3532b16b433a07984f71/settings.h#L165) to avoid clashes.
 If any is needed [start a discussion](https://github.com/grblHAL/core/discussions) first as I do not yet have a clear idea about how this should be handled, I guess it should be possible to use non-core settings in some cases.
 
-__Notes:__  
-The symbol definition may be added to the compiler command line instead, some IDEs allows this from the UI.  
-There is no owner of third party plugin names, existing names can be used for alternative implementations as long as they provide similar functionality.  
-Implementations should add information about itself in the `$I` report, see one of the [templates](https://github.com/grblHAL/Templates/tree/master/my_plugin) for how this is done.
+> [!NOTE]
+> The symbol definition may be added to the compiler command line instead, some IDEs allows this from the UI.  
+> There is no owner of third party plugin names, existing names can be used for alternative implementations as long as they provide similar functionality.  
+> Implementations should add information about itself in the `$I` report, see one of the [templates](https://github.com/grblHAL/Templates/tree/master/my_plugin) for how this is done.
 
 __Technical documentation:__  
 
@@ -106,4 +107,4 @@ Documentation extracted from the core repository is [available here](https://svn
 <sup>2</sup> Driver support code has `$`-settings, adding or removing this may cause settings for other plugins to be reset to default values. 
 
 ---
-2025-02-16
+2026-06-08
