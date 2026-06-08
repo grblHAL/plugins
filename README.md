@@ -40,6 +40,8 @@ NOTE: A plugin needs to be supported by the processor specific driver - as a min
 
 * [Pneumaseal](https://github.com/gcormier/grblhal-pneumaseal/) - for spindles requiring air to keep the bearing clean, this plugin will intelligently let you control a solenoid based on various conditions to reduce air usage when not required.
 
+* [Interlock](https://github.com/gcormier/grblhal-interlock/) - generic firmware interlock that inhibit spindle (M3/M4) and output (M62-M65) commands based on user defined states.
+
 * [Thermistor](https://github.com/gcormier/grblhal-thermistor/) - can read temperature from thermistors, and has configurable fault temperatures for detecting overheat conditions. Note - requires the appropriate resistor dividers, supply, ADC inputs  and code changes for your specific thermistor. Defaults are for a Jianken JGL-80 ATC spindle.
 
 
