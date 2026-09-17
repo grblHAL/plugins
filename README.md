@@ -12,13 +12,13 @@ NOTE: A plugin needs to be supported by the processor specific driver - as a min
 
 * [Networking](https://github.com/grblHAL/Plugin_networking/) - for telnet or websocket communication plus a number of other networking protocols<sup>2</sup>.
 
-* [Odometer](https://github.com/grblHAL/Plugin_odometer/) - for logging of distances travelled and machining time. __NOTE:__ For review.
+* [Odometer](https://github.com/grblHAL/Plugin_odometer/) - for logging of distances travelled and machining time.
 
 * [Plasma/THC](https://github.com/grblHAL/Plugin_plasma/) - for plasma machines<sup>1</sup>. __NOTE:__ Under development, testers wanted.
 
-* [SD card](https://github.com/grblHAL/Plugin_SD_card/) - for executing gcode stored on SD card and running macros from the card or in the littlefs finling system when available.
+* [SD card](https://github.com/grblHAL/Plugin_SD_card/) - for executing gcode stored on SD card and running macros from the card or in the littlefs filing system when available.
 
-* [Spindle](https://github.com/grblHAL/Plugins_spindle/) - for spindles controlled via MODBUS. __NOTE:__ Not yet verified, testers wanted.
+* [Spindle](https://github.com/grblHAL/Plugins_spindle/) - for spindles controlled via MODBUS.
 
 * [Trinamic](https://github.com/grblHAL/Plugins_motor/) - for Trinamic TMC2130, TMC2209 and TMC5160 stepper drivers controlled via SPI, UART or I2C<sup>1</sup>.
 
@@ -26,11 +26,11 @@ NOTE: A plugin needs to be supported by the processor specific driver - as a min
 
 * [Laser/Coolant](https://github.com/grblHAL/Plugins_laser/#laser-coolant) - for laser machines. __NOTE:__ Under development, testers wanted.
 
-* [Laser/LigthBurn clusters](https://github.com/grblHAL/Plugins_laser/#lightburn-clusters) - for laser machines. __NOTE:__ Under development, testers wanted.
+* [Laser/LigthBurn clusters](https://github.com/grblHAL/Plugins_laser/#lightburn-clusters) - for laser machines.
 
 * [Fans](https://github.com/grblHAL/Plugin_fans/) - for fan control.
 
-* [Bluetooth](https://github.com/grblHAL/Plugins_Bluetooth/) - for Bluetooth modules used for wireless communication<sup>1</sup>. __NOTE:__ Preview version.
+* [Bluetooth](https://github.com/grblHAL/Plugins_Bluetooth/) - for Bluetooth modules used for wireless communication<sup>1</sup>.
 
 * [WebUI](https://github.com/grblHAL/Plugin_WebUI/) - adds [ESP32-WEBUI](https://github.com/luc-github/ESP3D-webui) support for some networking capable boards and drivers.
 
@@ -40,19 +40,39 @@ NOTE: A plugin needs to be supported by the processor specific driver - as a min
 
 * [Miscellaneous](https://github.com/grblHAL/Plugins_misc/) - assorted small and useful plugins, follow the link to see which.
 
-### Third party plugins
+### Some third party plugins
 
-* ['Datron like' RGB indicator lights](https://github.com/5ocworkshop/grblhal-rgb-plugin) - by 5ocworkshop.
+* [Add status of digital aux outputs to real-time report](https://github.com/Avatario34/auxp#readme) - by Avatario34.
 
-* [Add status of digital aux outputs to real-time report](https://github.com/Avatario34/auxp) - by Avatario34.
+* ['Datron like' RGB indicator lights](https://github.com/5ocworkshop/grblhal-rgb-plugin#readme) - by 5ocworkshop.
 
-* [Pneumaseal](https://github.com/gcormier/grblhal-pneumaseal/) - for spindles requiring air to keep the bearing clean, this plugin will intelligently let you control a solenoid based on various conditions to reduce air usage when not required.
+* [Control panel](https://github.com/dresco/Plugin_panel#readme) - by dresco.
 
-* [Interlock](https://github.com/gcormier/grblhal-interlock/) - generic firmware interlock that inhibit spindle (M3/M4) and output (M62-M65) commands based on user defined states.
+* [CRC ensured MPG communication](https://github.com/nickshl/grblHAL_mpg_transport#readme) - by nickshl.
 
-* [Thermistor](https://github.com/gcormier/grblhal-thermistor/) - can read temperature from thermistors, and has configurable fault temperatures for detecting overheat conditions.
+* [FlexGPIO I2C I/O expander](https://github.com/Expatria-Technologies/plugin_FlexGPIO#readme) - by Expatria-Technologies.
+
+* [Homing acceleration](https://github.com/Sienci-Labs/grbhal-homingaccel-plugin#readme) - by Sienci-Labs.
+
+* [Interlock](https://github.com/gcormier/grblhal-interlock#readme) - generic firmware interlock that inhibit spindle (M3/M4) and output (M62-M65) commands based on user defined states.
+
+* [PicoHAL](https://github.com/Expatria-Technologies/Plugins_picoHAL) - by Expatria-Technologies.
+
+* [Pneumaseal](https://github.com/gcormier/grblhal-pneumaseal#readme) - for spindles requiring air to keep the bearing clean, this plugin will intelligently let you control a solenoid based on various conditions to reduce air usage when not required.
+
+* [Sienci ATCi](https://github.com/Sienci-Labs/sienci-atci-plugin#readme) - by Sienci-Labs.
+
+* [Sienci Lights](https://github.com/Sienci-Labs/grblhal-rgb-plugin#readme) - by Sienci-Labs.
+
+* [Thermistor](https://github.com/gcormier/grblhal-thermistor#readme) - can read temperature from thermistors, and has configurable fault temperatures for detecting overheat conditions.
 > [!NOTE]
 > Requires the appropriate resistor dividers, supply, ADC inputs  and code changes for your specific thermistor. Defaults are for a Jianken JGL-80 ATC spindle.
+
+* [Virtual inputs](https://github.com/siganberg/grblhal-virtual-inputs#readme) - by siganberg.
+
+### Repository for hosting plugins
+
+For those who do not want to host their plugin\(s\) on github [this repository](https://github.com/grblHAL-Plugins), maintained by @nickshl, can be used.
 
 ### Example and template plugins
 
@@ -107,4 +127,4 @@ Documentation extracted from the core repository is [available here](https://svn
 <sup>2</sup> Driver support code has `$`-settings, adding or removing this may cause settings for other plugins to be reset to default values. 
 
 ---
-2026-06-08
+2026-09-17
